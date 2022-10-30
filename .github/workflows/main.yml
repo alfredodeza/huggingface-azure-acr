@@ -60,4 +60,4 @@ jobs:
             az config set extension.use_dynamic_install=yes_without_prompt
             az containerapp registry set -n demo-container -g demo-container --server demoalfredo.azurecr.io --username ${{ secrets.ACR_USERNAME }} --password ${{ secrets.ACR_PASSWORD }}
             az containerapp update -n demo-container -g demo-container --cpu 2 --memory 4Gi
-            az containerapp update -n demo-container -g demo-container --image alfredodeza/huggingface-azure-acr:${{ github.sha }}
+            az containerapp update -n demo-container -g demo-container --image demoalfredo.azurecr.io/alfredodeza/huggingface-azure-acr:${{ github.sha }}
